@@ -7,28 +7,24 @@ let app, db, auth, userId, userName = 'ဧည့်သည် (Guest)', userPhone
 
 // IMPORTANT: Replace this with YOUR OWN Firebase project configuration
 // You can get this from your Firebase project settings -> "Your apps" -> Web app -> Config
+// Without a valid configuration, Firebase features (like saving orders) will not work.
 const firebaseConfig = {
-    // apiKey: "YOUR_API_KEY",
+    // Paste your Firebase config object here, e.g.:
+    // apiKey: "YOUR_API_KEY_GOES_HERE",
     // authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
     // projectId: "YOUR_PROJECT_ID",
     // storageBucket: "YOUR_PROJECT_ID.appspot.com",
     // messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
     // appId: "YOUR_APP_ID"
-    // Example placeholder - replace with your actual config
-    apiKey: "AIzaSyCXXXXXXXXXXXXXXXXXXXXXX",
-    authDomain: "your-project-id.firebaseapp.com",
-    projectId: "your-project-id",
-    storageBucket: "your-project-id.appspot.com",
-    messagingSenderId: "1234567890",
-    appId: "1:1234567890:web:abcdef1234567890abcdef"
 };
 
 
 // --- Firebase Initialization ---
 async function initializeFirebase() {
-    if (!firebaseConfig.apiKey || firebaseConfig.apiKey === "YOUR_API_KEY") {
-        console.warn("Firebase config not properly set. Firestore features may not be available.");
-        document.getElementById('displayUserId').textContent = "Firebase အမှား (Config Error)";
+    // Check if firebaseConfig is empty or missing essential keys
+    if (!firebaseConfig.apiKey || !firebaseConfig.projectId) {
+        console.error("Firebase config is missing or incomplete. Please provide your Firebase project's configuration.");
+        document.getElementById('displayUserId').textContent = "Firebase အမှား (Config မပြည့်စုံပါ)"; // Config incomplete
         // Proceed with UI display but without Firebase functionality
         document.getElementById('main-content').classList.remove('hidden');
         window.showTab('main-dashboard-section');
