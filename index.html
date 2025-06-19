@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>မိုင်ဆွန်ခ သန့်စင်သောသောက်ရေသန့်</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Burmese - Noto Sans Myanmar -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased leading-relaxed">
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <!-- Header Section -->
+        <header class="header-bg text-white shadow-lg py-4">
+            <nav class="container flex justify-between items-center">
+                <a href="#" class="text-3xl font-bold text-gray-100 tracking-wide">မိုင်ဆွန်ခ</a>
+                <ul class="flex space-x-8">
+                    <!-- Navigation links (tabs) -->
+                    <li><a href="#main-dashboard-section" class="nav-link text-lg font-light" onclick="window.showTab('main-dashboard-section')">ပင်မစာမျက်နှာ</a></li>
+                    <li><a href="#order-water-section" class="nav-link text-lg font-light" onclick="window.showTab('order-water-section')">ရေသန့်မှာယူရန်</a></li>
+                    <li><a href="#order-records-section" class="nav-link text-lg font-light" onclick="window.showTab('order-records-section')">မှာယူမှုမှတ်တမ်း</a></li>
+                    <li><a href="#contact-section" class="nav-link text-lg font-light" onclick="window.showTab('contact-section')">ဆက်သွယ်ရန်</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Tab Content Container -->
+        <div class="container py-8">
+            <!-- Main Dashboard Section (Home + Products) -->
+            <section id="main-dashboard-section" class="tab-content-section">
+                <!-- Hero Section -->
+                <div class="hero-section text-white py-32 md:py-48 text-center shadow-xl mb-12 rounded-lg">
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight">
+                        မိုင်ဆွန်ခ သန့်စင်သောသောက်ရေသန့်။
+                    </h1>
+                    <p class="text-xl md:text-2xl font-light mb-10 max-w-3xl mx-auto opacity-90">
+                        သန့်ရှင်းလတ်ဆတ်မှုနှင့် ကျန်းမာရေးအတွက် အကောင်းဆုံး သောက်ရေသန့်ကို ရွေးချယ်ပါ။
+                    </p>
+                    <a href="#products-in-dashboard" class="btn-elegant inline-block text-lg shadow-md hover:shadow-lg transform hover:scale-105">ထုတ်ကုန်များ ကြည့်ရှုရန်</a>
+                </div>
+
+                <!-- Products Section -->
+                <div id="products-in-dashboard" class="py-10 bg-[#F0F8FF] rounded-lg card-elegant">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-bold text-gray-800 section-title">ကျွန်ုပ်တို့၏ ထုတ်ကုန်များ</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8">
+                        <!-- Product 1: 20 ml Bottle -->
+                        <div class="card-elegant p-6 flex flex-col items-center text-center">
+                            <img src="https://placehold.co/300x300/ADD8E6/000000?text=20ml+Water" alt="20ml Bottle" class="w-48 h-48 mb-4 object-contain rounded-xl shadow-md">
+                            <h3 class="text-2xl font-bold mb-2 text-gray-800">၂၀ မီလီလီတာ ရေသန့်ပုလင်း</h3>
+                            <p class="text-md text-gray-600 leading-relaxed">
+                                အိတ်ဆောင်အတွက် သင့်တော်သော အရွယ်အစား။
+                            </p>
+                        </div>
+                        <!-- Product 2: 80 ml Bottle -->
+                        <div class="card-elegant p-6 flex flex-col items-center text-center">
+                            <img src="https://placehold.co/300x300/87CEEB/000000?text=80ml+Water" alt="80ml Bottle" class="w-48 h-48 mb-4 object-contain rounded-xl shadow-md">
+                            <h3 class="text-2xl font-bold mb-2 text-gray-800">၈၀ မီလီလီတာ ရေသန့်ပုလင်း</h3>
+                            <p class="text-md text-gray-600 leading-relaxed">
+                                နေ့စဉ် သောက်သုံးရန် အဆင်ပြေစေရန်။
+                            </p>
+                        </div>
+                        <!-- Product 3: 20 Liter Bottle -->
+                        <div class="card-elegant p-6 flex flex-col items-center text-center">
+                            <img src="https://placehold.co/300x300/6495ED/000000?text=20L+Water" alt="20L Bottle" class="w-48 h-48 mb-4 object-contain rounded-xl shadow-md">
+                            <h3 class="text-2xl font-bold mb-2 text-gray-800">၂၀ လီတာ ရေသန့်ပုံး</h3>
+                            <p class="text-md text-gray-600 leading-relaxed">
+                                မိသားစုနှင့် ရုံးများအတွက် လုံလောက်သော ပမာဏ။
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Order Water Section -->
+            <section id="order-water-section" class="tab-content-section hidden py-20 bg-white rounded-lg card-elegant">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-800 section-title">ရေသန့် မှာယူရန်</h2>
+                    <p class="text-xl text-gray-700 mt-4">
+                        သင်မှာယူလိုသော ရေသန့်ပမာဏကို ထည့်သွင်းပြီး မိုင်ဆွန်ခ စက်ရုံကို မှာယူနိုင်ပါသည်။
+                    </p>
+                </div>
+                <div class="flex flex-col items-center space-y-8">
+                    <div class="w-full max-w-3xl p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">မှာယူလိုသော ပမာဏ ထည့်သွင်းပါ</h3>
+                        <div class="space-y-6">
+                            <!-- Product 1: 20 ml -->
+                            <div class="flex flex-col md:flex-row items-center justify-between p-4 bg-gray-50 rounded-lg shadow-sm">
+                                <label for="customerOrder20ml" class="text-lg font-medium text-gray-700 w-40 text-left md:text-right mb-2 md:mb-0 md:mr-4">၂၀ မီလီလီတာ:</label>
+                                <div class="flex items-center w-full md:w-auto">
+                                    <input type="number" id="customerOrder20ml" value="0" min="0" class="w-24 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4682B4] transition duration-200 text-center mr-4">
+                                    <span class="text-gray-600">ပုလင်း</span>
+                                </div>
+                                <button class="btn-elegant text-sm px-4 py-2 mt-4 md:mt-0 ml-0 md:ml-4" onclick="window.confirmAndSendOrder('20ml', '၂၀ မီလီလီတာ ရေသန့်ပုလင်း', 'ပုလင်း')">
+                                    မှာယူရန်
+                                </button>
+                            </div>
+
+                            <!-- Product 2: 80 ml -->
+                            <div class="flex flex-col md:flex-row items-center justify-between p-4 bg-gray-50 rounded-lg shadow-sm">
+                                <label for="customerOrder80ml" class="text-lg font-medium text-gray-700 w-40 text-left md:text-right mb-2 md:mb-0 md:mr-4">၈၀ မီလီလီတာ:</label>
+                                <div class="flex items-center w-full md:w-auto">
+                                    <input type="number" id="customerOrder80ml" value="0" min="0" class="w-24 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4682B4] transition duration-200 text-center mr-4">
+                                    <span class="text-gray-600">ပုလင်း</span>
+                                </div>
+                                <button class="btn-elegant text-sm px-4 py-2 mt-4 md:mt-0 ml-0 md:ml-4" onclick="window.confirmAndSendOrder('80ml', '၈၀ မီလီလီတာ ရေသန့်ပုလင်း', 'ပုလင်း')">
+                                    မှာယူရန်
+                                </button>
+                            </div>
+
+                            <!-- Product 3: 20 Liter -->
+                            <div class="flex flex-col md:flex-row items-center justify-between p-4 bg-gray-50 rounded-lg shadow-sm">
+                                <label for="customerOrder20l" class="text-lg font-medium text-gray-700 w-40 text-left md:text-right mb-2 md:mb-0 md:mr-4">၂၀ လီတာ:</label>
+                                <div class="flex items-center w-full md:w-auto">
+                                    <input type="number" id="customerOrder20l" value="0" min="0" class="w-24 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4682B4] transition duration-200 text-center mr-4">
+                                    <span class="text-gray-600">ပုံး</span>
+                                </div>
+                                <button class="btn-elegant text-sm px-4 py-2 mt-4 md:mt-0 ml-0 md:ml-4" onclick="window.confirmAndSendOrder('20l', '၂၀ လီတာ ရေသန့်ပုံး', 'ပုံး')">
+                                    မှာယူရန်
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text-lg mt-6 text-gray-600">
+                            <strong class="text-gray-900">သင်၏ User ID:</strong> <span id="displayUserId" class="break-words">...Loading...</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Order Records Section -->
+            <section id="order-records-section" class="tab-content-section hidden py-20 bg-white rounded-lg card-elegant">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-800 section-title">မှာယူမှုမှတ်တမ်း</h2>
+                    <p class="text-xl text-gray-700 mt-4">
+                        သင်၏ ယခင်မှာယူမှုများကို ဤနေရာတွင် ကြည့်ရှုနိုင်ပါသည်။
+                    </p>
+                </div>
+                <div id="orderRecordsList" class="space-y-6 px-8">
+                    <p class="text-center text-gray-500">မှာယူမှုမှတ်တမ်း မရှိသေးပါ။</p>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact-section" class="tab-content-section hidden py-20 bg-white rounded-lg card-elegant">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-800 section-title">ဆက်သွယ်ရန်</h2>
+                    <p class="text-xl text-gray-700 mt-4">
+                        မေးမြန်းလိုသည်များရှိပါက ကျွန်ုပ်တို့နှင့် ဆက်သွယ်နိုင်ပါသည်။
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 mt-12 px-8">
+                    <div class="card-elegant p-8 text-left flex flex-col justify-center">
+                        <p class="text-xl font-semibold mb-4 text-gray-800">ကျွန်ုပ်တို့အဖွဲ့နှင့် ဆက်သွယ်ပါ</p>
+                        <p class="text-lg mb-2 text-gray-700"><strong class="text-gray-900">လိပ်စာ:</strong> နံပါတ် (၁၂၃)၊ မိုင်ဆွန်ခ လမ်း၊ ရေကြည်ရပ်ကွက်၊ မြစ်ကြီးနားမြို့။</p>
+                        <p class="text-lg mb-2 text-gray-700"><strong class="text-gray-900">ဖုန်း:</strong> +၉၅ ၉ ၇၇၇ ၁၂၃ ၄၅၆</p>
+                        <p class="text-lg mb-2 text-gray-700"><strong class="text-gray-900">အီးမေးလ်:</strong> info@maisomkha.com</p>
+                        <p class="text-lg text-gray-700"><strong class="text-gray-900">လုပ်ငန်းချိန်:</strong> တနင်္လာ - သောကြာ၊ နံနက် ၉:၀၀ - ညနေ ၅:၀၀</p>
+                    </div>
+                    <div class="card-elegant p-8">
+                        <form id="contactForm" class="space-y-6">
+                            <div>
+                                <label for="contact-name" class="block text-gray-700 text-lg font-medium mb-2 text-left">အမည်</label>
+                                <input type="text" id="contact-name" name="name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4682B4]" placeholder="သင့်အမည်" required>
+                            </div>
+                            <div>
+                                <label for="contact-email" class="block text-gray-700 text-lg font-medium mb-2 text-left">အီးမေးလ်</label>
+                                <input type="email" id="contact-email" name="email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4682B4]" placeholder="သင့်အီးမေးလ်" required>
+                            </div>
+                            <div>
+                                <label for="contact-phone" class="block text-gray-700 text-lg font-medium mb-2 text-left">ဖုန်းနံပါတ်</label>
+                                <input type="tel" id="contact-phone" name="phone" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4682B4]" placeholder="သင့်ဖုန်းနံပါတ် (optional)">
+                            </div>
+                            <div>
+                                <label for="contact-message" class="block text-gray-700 text-lg font-medium mb-2 text-left">မက်ဆေ့ချ်</label>
+                                <textarea id="contact-message" name="message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4682B4]" placeholder="သင့်မက်ဆေ့ချ်" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-elegant w-full text-lg shadow-md hover:scale-105 transform">ပို့ရန်</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Call to Action / Quote Section -->
+        <section class="py-20 bg-[#1E3A8A] text-white text-center shadow-inner"> <!-- Deep Navy Blue -->
+            <div class="container max-w-3xl">
+                <h2 class="text-4xl font-bold mb-6 leading-tight">
+                    "မိုင်ဆွန်ခ - သန့်ရှင်းသောရေ၊ ကျန်းမာသောဘဝ။"
+                </h2>
+                <p class="text-xl font-light opacity-80 mb-10">— မိုင်ဆွန်ခ ရေသန့်</p>
+                <a href="#contact-section" class="btn-elegant inline-block text-lg bg-white text-gray-800 border-white hover:bg-gray-200" onclick="window.showTab('contact-section')">ဆက်သွယ်ရန်</a>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="bg-gray-900 text-white py-8 shadow-inner">
+            <div class="container text-center text-md opacity-90">
+                <p>&copy; ၂၀၂၅ မိုင်ဆွန်ခ သန့်စင်သောသောက်ရေသန့်။ မူပိုင်ခွင့်များ ရရှိပြီး။</p>
+                <p class="mt-2">သန့်ရှင်းမှု၊ ကျန်းမာရေး၊ ယုံကြည်မှု။</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Custom Modal for Messages -->
+    <div id="customModalOverlay" class="modal-overlay">
+        <div class="modal-content">
+            <h3 id="modalTitle" class="text-2xl font-bold mb-4 text-gray-800"></h3>
+            <p id="modalMessage" class="text-lg text-gray-700 mb-6"></p>
+            <div id="modalButtons" class="flex justify-center space-x-4">
+                <!-- Buttons will be injected here by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>

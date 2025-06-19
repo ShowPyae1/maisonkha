@@ -1,0 +1,177 @@
+html {
+    scroll-behavior: smooth; /* Add smooth scroll behavior to the entire page */
+}
+body {
+    font-family: 'Noto Sans Myanmar', sans-serif; /* Using Noto Sans Myanmar for Pyidaungsu-like feel */
+    background-color: #EBF5F8; /* Very pale blue-grey background */
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans Myanmar', serif; /* Use the same for headings for consistency */
+    font-weight: 700; /* Bold for headings */
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem; /* Slightly more padding for a spacious feel */
+}
+.btn-elegant {
+    background-color: #4682B4; /* Steel Blue */
+    color: #FFFFFF; /* White text */
+    padding: 0.8rem 2.5rem;
+    border-radius: 9999px; /* Pill shape */
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    border: 1px solid #4682B4; /* Matching border */
+    transition: all 0.5s ease-in-out; /* Smoother transition for all properties */
+}
+.btn-elegant:hover {
+    background-color: #87CEEB; /* Sky Blue on hover */
+    color: #1A1A1A; /* Dark text on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    transform: translateY(-3px); /* More pronounced lift */
+    border-color: #87CEEB; /* Matching border on hover */
+}
+.card-elegant {
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smoother transition for cards */
+}
+.card-elegant:hover {
+    transform: translateY(-7px); /* More pronounced lift on cards */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+.header-bg {
+    background: linear-gradient(to right, #4682B4, #366A9B); /* Blue gradient */
+}
+.hero-section {
+    background: linear-gradient(rgba(70, 130, 180, 0.5), rgba(70, 130, 180, 0.5)), url('https://placehold.co/1920x1080/BBDEFB/333333?text=Clean+Water+Ripples'); /* Light blue gradient overlay, light blue ripple image */
+    background-size: cover;
+    background-position: center;
+}
+.section-title {
+    position: relative;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2.5rem;
+    display: inline-block; /* To make the pseudo-element underline only the text */
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background-color: #4682B4; /* Steel Blue accent */
+}
+.nav-link {
+    transition: color 0.5s ease; /* Smoother transition for nav links */
+}
+.nav-link:hover {
+    color: #BBDEFB; /* Lighter blue on hover */
+}
+input[type="text"], input[type="email"], input[type="number"], textarea {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for input focus */
+}
+input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus, textarea:focus {
+    border-color: #4682B4;
+    box-shadow: 0 0 0 3px rgba(70, 130, 180, 0.3);
+}
+
+/* Styles for the custom modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease; /* Smoother modal transition */
+}
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    transform: translateY(-30px); /* More pronounced initial translateY */
+    transition: transform 0.4s ease; /* Smoother modal content transition */
+}
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+/* Loading Spinner */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+.loading-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+.spinner {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #4682B4; /* Steel Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Tab content styling */
+.tab-content-section {
+    transition: opacity 0.5s ease-in-out;
+}
+.tab-content-section.hidden {
+    opacity: 0;
+    height: 0; /* Collapse height when hidden */
+    overflow: hidden; /* Hide overflowing content */
+}
+.tab-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background-color: #F0F8FF; /* Light background for inactive tabs */
+    color: #4682B4; /* Text color matching theme */
+}
+.tab-button.active {
+    background-color: #4682B4; /* Active tab color */
+    color: #FFFFFF; /* Active tab text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.tab-button:hover:not(.active) {
+    background-color: #BBDEFB; /* Lighter blue on hover for inactive */
+    color: #1A1A1A;
+}
